@@ -1,7 +1,9 @@
+import CaseStudy from "components/CaseStudy/case-study"
+
 export default function HeroSection() {
   return (
-    <section>
-      <h1 className="h1 text-8xl font-black">Project Case study</h1>
+    <section className="caseStudy container p-4">
+      <CaseStudy />
     </section>
   )
 }

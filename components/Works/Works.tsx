@@ -9,9 +9,9 @@ import Project from "./Project"
 export default function Work() {
   const icons = [ireact, inext, itypescript, igit, iprisma]
   return (
-    <section className="relative min-h-screen" id="work">
-      <div className="work-title bg-work sticky top-0 my-16">
-        <h1 className="text-8xl font-black">Works</h1>
+    <section className="container relative min-h-screen" id="work">
+      <div className="work-title bg-work sticky top-0 my-16  text-center">
+        <h1 className=" text-4xl font-black text-indigo-700 md:text-6xl lg:text-8xl">Works</h1>
         <h3 className="font-medium">Project | Collaboration | Exploration</h3>
       </div>
       <Project

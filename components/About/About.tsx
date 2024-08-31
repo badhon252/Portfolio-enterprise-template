@@ -1,8 +1,10 @@
 export default function About() {
   return (
-    <section className="min-h-screen " id="about">
+    <section className="min-h-screen p-4" id="about">
       <div className="sm:w-12/12 mx-auto md:w-4/6 xl:w-3/6">
-        <h1 className="h1 text-bold my-8 text-8xl font-black">About Me</h1>
+        <h1 className="h1 text-bold my-8 text-center text-4xl font-black text-indigo-700 md:text-6xl lg:text-8xl">
+          About Me
+        </h1>
         Hi, I&apos;m Khalid Hossain, a dedicated Frontend Engineer and Python Instructor based in Barishal, Bangladesh.
         My passion lies in crafting seamless, user-centric web applications using the latest technologies, including
         Next.js, TypeScript, and TailwindCSS. I&apos;m committed to delivering innovative solutions that not only meet

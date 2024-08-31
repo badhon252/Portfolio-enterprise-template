@@ -2,7 +2,6 @@ import Image from "next/image"
 import Link from "next/link"
 import Icons from "./Icons"
 
-// Define the IconType (assuming it's the same structure as used in the Icons component)
 type IconType = {
   src: string
   height: number
@@ -10,43 +9,49 @@ type IconType = {
 }
 
 interface ProjectProps {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  img: any // Typically a string representing the image URL, but can be adjusted if it's a different type
+  img: any
   title: string
   desc: string
-  icon: IconType[] // Array of IconType objects
+  icon: IconType[]
 }
 
 export default function Project({ img, title, desc, icon }: ProjectProps) {
   return (
-    <section className="product my-8 flex flex-wrap">
+    <section className="product my-8 flex flex-col gap-8 p-4 md:flex-row ">
       <div className="product-img md:basis-3/5 ">
         <Image
           src={img}
-          alt="Product Image"
-          className="cursor-pointer border shadow-md hover:shadow-lg "
-          layout="responsive" // Adjust layout as needed
-          width={700} // Provide default width
-          height={475} // Provide default height
+          alt={`Image for ${title}`} // Enhanced alt text
+          className="cursor-pointer rounded-lg border shadow-md transition-shadow duration-300 ease-in-out hover:shadow-lg"
+          layout="responsive"
+          width={700}
+          height={475}
         />
       </div>
 
-      <div className="product-details flex flex-col items-end justify-center text-right md:basis-2/5">
-        <h1 className="h1 m-5 text-4xl font-bold">{title}</h1>
-        <p className="description my-4 p-4">{desc}</p>
-        <div className="tech-stack">
-          <Icons icons={icon} />
+      <div className="product-details flex flex-col items-start text-left md:basis-2/5  md:items-end md:text-right">
+        <div className="">
+          <h1 className="my-4 text-2xl font-bold md:mb-6 md:text-4xl">{title}</h1>
+          <p className="description mb-4 text-sm md:text-base">{desc}</p>
+          <div className="tech-stack mb-4">
+            <Icons icons={icon} />
+          </div>
         </div>
-
-        <ul className="links flex ">
-          <li className="product-link mx-4">
-            <Link href="/case-study">Case Study</Link>
+        <ul className="links flex flex-wrap gap-4">
+          <li className="product-link">
+            <Link href="/case-study">
+              <p className="text-blue-500 hover:underline">Case Study</p>
+            </Link>
           </li>
-          <li className="product-link mx-4">
-            <Link href="#">Github</Link>
+          <li className="product-link">
+            <Link href="#">
+              <p className="text-blue-500 hover:underline">Github</p>
+            </Link>
           </li>
-          <li className="product-link mx-4">
-            <Link href="#">Live</Link>
+          <li className="product-link">
+            <Link href="#">
+              <p className="text-blue-500 hover:underline">Live</p>
+            </Link>
           </li>
         </ul>
       </div>

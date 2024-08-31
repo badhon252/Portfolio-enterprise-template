@@ -16,6 +16,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      width: {
+        128: "32rem",
+      },
       colors: {
         primary: {
           50: "#eff6ff",
